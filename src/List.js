@@ -1,14 +1,32 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
-const List = () => {
+const List = ({ data, handleEdit, handleDelete }) => {
     return (
-        <div key={} className="list-group-item list-group-item-action">
-            <div className="row">
-                <div className="d-flex w-100 justify-content-between">
-                    <h5 className="mb-1"></h5>
-                </div>
-            </div>
-        </div>
+        <tbody>
+            {data.map((contact, index) => {
+                return (
+                    <tr key={index}>
+                        <td>{contact.name}</td>
+                        <td>{contact.telp}</td>
+                        <td>
+                            <Button
+                                onClick={() => handleEdit(contact.id)}
+                                variant="warning"
+                                size="sm">
+                                Edit
+                            </Button>{" "}
+                            <Button
+                                onClick={() => handleDelete(contact.id)}
+                                variant="danger"
+                                size="sm">
+                                Del
+                            </Button>
+                        </td>
+                    </tr>
+                );
+            })}
+        </tbody>
     );
 };
 

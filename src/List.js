@@ -20,7 +20,7 @@ const List = ({ data, handleEdit, handleDelete }) => {
                                 onClick={() => handleDelete(contact.id)}
                                 variant="danger"
                                 size="sm">
-                                Del
+                                <i class="ri-delete-bin-line"></i>
                             </Button>
                         </td>
                     </tr>

@@ -86,8 +86,8 @@ function App() {
 
     return (
         <div>
-            <div className="bg-white pb-3 mx-auto" style={{ width: 600 }}>
-                <h1 className="px-3 d-flex justify-content-center py-3">
+            <div className="bg-white pb-3 mx-auto" style={{ width: "80%" }}>
+                <h1 className="px-3 d-flex justify-content-center py-5">
                     My Contact List
                 </h1>
                 <Form onSubmit={handleSubmit}>

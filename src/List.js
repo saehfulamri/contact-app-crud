@@ -9,13 +9,13 @@ const List = ({ data, handleEdit, handleDelete }) => {
                     <tr key={index}>
                         <td>{contact.name}</td>
                         <td>{contact.telp}</td>
-                        <td>
+                        <td className="d-flex gap-2">
                             <Button
                                 onClick={() => handleEdit(contact.id)}
                                 variant="warning"
                                 size="sm">
                                 Edit
-                            </Button>{" "}
+                            </Button>
                             <Button
                                 onClick={() => handleDelete(contact.id)}
                                 variant="danger"
